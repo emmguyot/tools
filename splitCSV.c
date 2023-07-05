@@ -80,7 +80,10 @@ int main (int argc, char** argv) {
                 else {
                     fputc(c, fout);
 
-                    if (numLigne == 0) { entete[tailleLigne] = 0; }
+                    if (numLigne == 0) { 
+                        entete[tailleLigne++] = '\n';
+                        entete[tailleLigne++] = 0;
+                    }
                     numLigne++;
 
                     if (numLigne % 10000 == 0) {
